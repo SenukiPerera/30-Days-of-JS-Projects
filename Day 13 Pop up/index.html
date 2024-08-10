@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Pop up</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <button type="submit" class="btn" onclick="openPopup()">Submit</button>
+            <div class="popup" id="popup">
+                <img src="tick.png" alt="Success">
+                <h2>Thank You!</h2>
+                <p>Your details have been successfully submitted. Thanks!</p>
+                <button type="button" onclick="closePopup()">OK</button>
+            </div>
+        </div>
+
+        <script>
+            let popup = document.getElementById("popup");
+
+            function openPopup(){
+                popup.classList.add("open-popup");
+            }
+
+            function closePopup(){
+                popup.classList.remove("open-popup");
+            }
+        </script>
+    </body>
+</html>

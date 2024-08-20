@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Password</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="input-box">
+            <input type="password" placeholder="Password" id="password">
+            <img src="images/eye-close.png" id="eyeicon">
+        </div>
+
+        <script>
+            let eyeicon = document.getElementById("eyeicon");
+            let password = document.getElementById("password");
+
+            eyeicon.onclick = function() {
+                if(password.type == "password"){
+                    password.type = "text";
+                    eyeicon.src = "images/eye-open.png";
+                } else{
+                    password.type = "password";
+                    eyeicon.src = "images/eye-close.png"
+                }
+            }
+        </script>
+    </body>
+</html>

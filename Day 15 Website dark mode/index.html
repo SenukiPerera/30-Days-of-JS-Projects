@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Modes</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!--nav bar-->
+        <header class="header">
+            <a href="#" class="logo">Portfolio.</a>
+            <nav class="navbar">
+                <a href="#home" class="active" style="--i:1">Home</a>
+                <a href="#about" style="--i:2">About</a>
+                <a href="#services" style="--i:3">Services</a>
+                <a href="#skills" style="--i:4">Skills</a>
+                <a href="#portfolio" style="--i:5">Portfolio</a>
+                <a href="#contact" style="--i:6">Contact</a>
+            </nav>
+            <img src="images/sun.png" id="icon">
+        </header>
+        <!--Home-->
+        <section class="home" id="home">
+            <div class="hero-container"> <!--home-Content-->
+                <div class="info-side">
+                    <h3>Hello, It's Me</h3>
+                    <h1>John Smith</h1>
+                    <h3>And I'm a UI Designer.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <!--social media icons-->
+                    <div class="icons">
+                        <a href="#" style="--i:7"><i class="uil uil-linkedin"></i></a>
+                        <a href="#" style="--i:8"><i class="uil uil-twitter"></i></a>
+                        <a href="#" style="--i:9"><i class="uil uil-github"></i></a>
+                    </div>
+                    <br>
+                    <button class="btn"><a href="#">Download CV</a></button>
+                </div>
+                <div class="hero-img">
+                    <img src="images/my pic.png" alt="My Picture">
+                </div>
+            </div>
+        </section>
+
+        <script>
+
+            var icon = document.getElementById("icon");
+
+            icon.onclick = function(){
+                document.body.classList.toggle("light-theme");
+                if(document.body.classList.contains("light-theme"))
+                {
+                    icon.src = "images/moon.png";
+                } else{
+                    icon.src = "images/sun.png";
+                }
+            }
+
+        </script>
+
+    </body>
+</html>

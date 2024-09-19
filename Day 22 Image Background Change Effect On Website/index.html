@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Background Changer</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="img-box">
+                <img src="images/transparent.png" width="100%">
+                <div class="img-wrap">
+                    <img src="images/original.jpg" id="originalImg">
+                </div>
+                <span id="line"><img src="images/arrow.png" class="arrow"></span>
+            </div>
+        </div>
+
+        <script>
+            var ImgBox = document.querySelector(".img-box");
+            var ImgWrap = document.querySelector(".img-wrap");
+            var originalImg = document.getElementById("originalImg");
+            var line = document.getElementById("line");
+
+            originalImg.style.width = ImgBox.offsetWidth + "px";
+
+            var leftSpace = ImgBox.offsetLeft;
+
+            ImgBox.onmousemove = function(e){
+                var boxWidth = (e.pageX - leftSpace) + "px";
+                ImgWrap.style.width = boxWidth;
+                line.style.left = boxWidth;
+            }
+
+
+        </script>
+
+    </body>
+</html>
